@@ -27,6 +27,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "@claviska/jquery-minicolors": "^2.2.6"
+    "react-color": "^2.13.4"
   }
 }
