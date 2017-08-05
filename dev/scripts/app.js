@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import firebase, {auth, database, provider, dbRef} from './firebase.js';
 import jQuery from 'jquery';
-import miniColors from '@claviska/jquery-minicolors';
+import { ChromePicker } from 'react-color';
 import CreateGradient from './components/GradientInputs';
 
 class App extends React.Component {
@@ -49,6 +49,7 @@ class App extends React.Component {
 					<div>
 						<button onClick={this.logout}>Logout</button>
 						<CreateGradient />
+                        <ChromePicker />
 					</div>
 				)
 			} else {
@@ -62,7 +63,6 @@ class App extends React.Component {
 		return (
 			<main>
 				{displayGradients()}
-				{colorPicker()}
 			</main>
 		)
 	}
@@ -82,10 +82,6 @@ class App extends React.Component {
 				})
 			}
 		});
-	}
-
-	colorPicker() {
-		$('INPUT.minicolors').minicolors(settings);
 	}
 }
 
